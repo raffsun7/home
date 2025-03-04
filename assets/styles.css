@@ -66,7 +66,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 8px;
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 nav ul li {
@@ -76,6 +76,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: var(--text-color);
+    font-size: 14px;
     font-weight: 400;
     padding: 10px 10px;
     transition: 0.3s;
@@ -91,7 +92,7 @@ nav ul li a:hover {
     background: none;
     border: none;
     color: var(--text-color);
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     cursor: pointer;
 }
 
@@ -101,7 +102,7 @@ nav ul li a:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 5px;
     padding: 10px;
@@ -117,6 +118,7 @@ nav ul li a:hover {
     color: var(--text-color);
     padding: 8px 15px;
     display: block;
+    font-size: 13px;
     transition: 0.3s;
 }
 
@@ -145,13 +147,14 @@ nav ul li a:hover {
 
 .text {
     flex: 1;
-    min-width: 300px;
-    padding: 20px;
+    min-width: 400px;
+    padding: 25px;
 }
 
 .text h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 50px;
+    line-height: 3.5rem;
+    font-weight: 600;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
     color: var(--text-color);
@@ -164,7 +167,7 @@ nav ul li a:hover {
 }
 
 .text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
     opacity: 0;
     animation: slideUp 1.5s forwards;
@@ -283,10 +286,22 @@ nav ul li a:hover {
 }
 
 /* Testimonials Section */
+.container h2{
+    padding: 10px 10px;
+}
 .testimonials {
     margin-top: 100px;
 }
-
+.testimonials p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b0b0b0;
+}
+.testimonials h3{
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -559,4 +574,4 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    }
+        }

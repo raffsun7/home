@@ -1,0 +1,697 @@
+/* Root Variables for Themes */
+:root {
+    /* Dark Theme Colors */
+    --background-dark: #0D0D0D;
+    --text-dark: white;
+    --accent-dark: #1E90FF; /* Modern blue */
+    --section-bg-dark: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --section-shadow-dark: rgba(0, 0, 0, 0.3);
+    --search-bg-dark: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --search-border-dark: #1E90FF;
+    --search-placeholder-dark: rgba(255, 255, 255, 0.7);
+    --filter-btn-bg-dark: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --filter-btn-border-dark: #1E90FF;
+    --filter-btn-active-bg-dark: #1E90FF;
+    --filter-btn-active-text-dark: #0D0D0D;
+    --gallery-item-bg-dark: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --gallery-item-hover-bg-dark: rgba(30, 144, 255, 0.2); /* Glassy effect */
+    --lightbox-bg-dark: rgba(0, 0, 0, 0.8);
+    --lightbox-text-dark: white;
+    --progress-bar-dark: #1E90FF;
+    --back-to-top-bg-dark: #1E90FF;
+    --back-to-top-text-dark: #0D0D0D;
+
+    /* Light Theme Colors */
+    --background-light: #f5f5f5;
+    --text-light: #333;
+    --accent-light: #1E90FF; /* Modern blue */
+    --section-bg-light: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --section-shadow-light: rgba(0, 0, 0, 0.1);
+    --search-bg-light: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --search-border-light: #1E90FF;
+    --search-placeholder-light: rgba(0, 0, 0, 0.7);
+    --filter-btn-bg-light: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --filter-btn-border-light: #1E90FF;
+    --filter-btn-active-bg-light: #1E90FF;
+    --filter-btn-active-text-light: white;
+    --gallery-item-bg-light: rgba(30, 144, 255, 0.1); /* Glassy effect */
+    --gallery-item-hover-bg-light: rgba(30, 144, 255, 0.2); /* Glassy effect */
+    --lightbox-bg-light: rgba(0, 0, 0, 0.8);
+    --lightbox-text-light: white;
+    --progress-bar-light: #1E90FF;
+    --back-to-top-bg-light: #1E90FF;
+    --back-to-top-text-light: white;
+}
+
+/* General Styles */
+* {
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+body {
+    background: var(--background-dark);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.light-mode {
+    background: var(--background-light);
+    color: var(--text-light);
+}
+/* Header Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Header Styles */
+header {
+    background: rgba(30, 144, 255, 0.1);
+    padding: 10px 20px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.light-mode header {
+    background: rgba(30, 144, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-transform: none; /* Natural font case */
+}
+
+
+/* Section Styling with Glassy Effect */
+.section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: var(--section-bg-dark);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px var(--section-shadow-dark);
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Glassy border */
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+body.light-mode .section {
+    background: var(--section-bg-light);
+    box-shadow: 0 4px 15px var(--section-shadow-light);
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Glassy border */
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-dark);
+    transition: color 0.5s ease;
+}
+
+body.light-mode h1 {
+    color: var(--accent-light);
+}
+
+/* Search Bar with Glassy Effect */
+#search-bar {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid var(--search-border-dark);
+    border-radius: 25px;
+    background: var(--search-bg-dark);
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+body.light-mode #search-bar {
+    background: var(--search-bg-light);
+    color: var(--text-light);
+    border-color: var(--search-border-light);
+}
+
+#search-bar::placeholder {
+    color: var(--search-placeholder-dark);
+}
+
+body.light-mode #search-bar::placeholder {
+    color: var(--search-placeholder-light);
+}
+
+/* Filter Buttons with Glassy Effect */
+.filter-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: var(--filter-btn-bg-dark);
+    border: 2px solid var(--filter-btn-border-dark);
+    color: var(--text-dark);
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 0.6rem;
+    transition: background 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    backdrop-filter: blur(10px); /* Glassy effect */
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--filter-btn-active-bg-dark);
+    color: var(--filter-btn-active-text-dark);
+    transform: scale(1.05);
+    border-color: var(--filter-btn-border-dark);
+}
+
+body.light-mode .filter-btn {
+    background: var(--filter-btn-bg-light);
+    color: var(--text-light);
+    border-color: var(--filter-btn-border-light);
+}
+
+body.light-mode .filter-btn.active, body.light-mode .filter-btn:hover {
+    background: var(--filter-btn-active-bg-light);
+    color: var(--filter-btn-active-text-light);
+    border-color: var(--filter-btn-border-light);
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Image Styling with Glassy Effect */
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: var(--gallery-item-bg-dark);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Glassy border */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(30, 144, 255, 0.4); /* Blue shadow */
+    background: var(--gallery-item-hover-bg-dark);
+}
+
+body.light-mode .gallery-item {
+    background: var(--gallery-item-bg-light);
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Glassy border */
+}
+
+body.light-mode .gallery-item:hover {
+    background: var(--gallery-item-hover-bg-light);
+}
+
+/* Hide Images Initially */
+.gallery-item.hidden {
+    display: none;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: var(--gallery-item-bg-dark);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.5s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.gallery-item.hidden {
+    display: none; /* Hide images initially */
+    opacity: 0; /* Fade out effect */
+}
+
+/* Load All Button */
+.load-all-btn {
+    background: var(--accent-dark);
+    border: none;
+    color: var(--background-dark);
+    padding: 12px 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.load-all-btn:hover {
+    background: #1C86EE; /* Slightly darker blue */
+    transform: scale(1.05);
+}
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--lightbox-bg-dark);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 15px;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-content.zoomed {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
+.caption {
+    color: var(--lightbox-text-dark);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--lightbox-text-dark);
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: var(--accent-dark);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: var(--lightbox-text-dark);
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.prev { left: 30px; }
+.next { right: 30px; }
+
+.prev:hover, .next:hover {
+    color: var(--accent-dark);
+}
+
+/* Download Button */
+#download-btn button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-dark);
+    border: none;
+    color: var(--background-dark);
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 120px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Glassy border */
+}
+
+#download-btn button:hover {
+    background: #1C86EE; /* Slightly darker blue */
+    transform: scale(1.05);
+}
+
+body.light-mode #download-btn button{
+    background: var(--accent-light);
+    color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Glassy border for light mode */
+}
+
+body.light-mode #download-btn button:hover {
+    background: #1C86EE; /* Slightly darker blue */
+}
+
+/* Progress Bar */
+#progress-bar {
+    width: 0;
+    height: 4px;
+    background: var(--progress-bar-dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: width 0.3s ease;
+}
+
+body.light-mode #progress-bar {
+    background: var(--progress-bar-light);
+}
+
+
+/* Theme Toggle Button */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-dark);
+    border: none;
+    color: var(--background-dark);
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Glassy border */
+    z-index: 1001; /* Higher than sections */
+}
+
+#theme-toggle:hover {
+    background: #1C86EE; /* Slightly darker blue */
+    transform: scale(1.1);
+}
+
+body.light-mode #theme-toggle {
+    background: var(--accent-light);
+    color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Glassy border for light mode */
+}
+
+body.light-mode #theme-toggle:hover {
+    background: #1C86EE; /* Slightly darker blue */
+}
+/* Loader */
+.loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+body.light-mode .loader {
+    color: var(--text-light);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+/* Back to Top Button Fix */
+#back-to-top {
+    position: fixed;
+    bottom: 80px; /* Move above the footer */
+    right: 30px;
+    background: var(--accent-dark);
+    border: none;
+    color: var(--background-dark);
+    font-weight: bold;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: none;
+    font-size: 2rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(10px); /* Glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Glassy border */
+    z-index: 1001; /* Ensure it's above the footer */
+}
+
+#back-to-top:hover {
+    background: #1C86EE; /* Slightly darker blue */
+    transform: scale(1.1);
+}
+
+body.light-mode #back-to-top {
+    background: var(--accent-light);
+    color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Glassy border for light mode */
+}
+
+body.light-mode #back-to-top:hover {
+    background: #1C86EE; /* Slightly darker blue */
+}
+
+/* Footer Styles */
+/* Wave Divider Styles */
+.wave-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -1px; /* Adjust as needed */
+}
+
+.wave-divider svg {
+    width: 100%;
+    height: 50px; /* Adjust wave height */
+}
+
+body.light-mode .wave-divider svg path {
+    fill: linear-gradient(135deg, rgba(30, 144, 255, 0.1), rgba(0, 0, 0, 0.1));
+}
+
+/* Footer Styles */
+
+footer {
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.1), rgba(0, 0, 0, 0.1));
+    animation: gradientAnimation 10s ease infinite;
+    background-size: 200% 200%;/* Semi-transparent blue background */
+    color: var(--text-dark);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Glassy border */
+    backdrop-filter: blur(10px); /* Glassy effect */
+    margin-top: 0px; /* Add space above the footer */
+}
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.light-mode footer {
+    background: rgba(30, 144, 255, 0.05); /* Lighter semi-transparent blue */
+    color: var(--text-light);
+    border-top: 1px solid rgba(0, 0, 0, 0.1); /* Glassy border for light mode */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.social-links, .quick-links {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.social-links h3, .quick-links h3 {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    color: var(--accent-dark);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+body.light-mode .social-links h3,
+body.light-mode .quick-links h3 {
+    color: var(--accent-light);
+}
+
+.social-links ul, .quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links ul li, .quick-links ul li {
+    margin: 10px 0;
+}
+
+.social-links ul li a, .quick-links ul li a {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+body.light-mode .social-links ul li a,
+body.light-mode .quick-links ul li a {
+    color: var(--text-light);
+}
+
+.social-links ul li a:hover, .quick-links ul li a:hover {
+    color: var(--accent-dark);
+    transform: translateX(5px); /* Hover animation */
+}
+
+body.light-mode .social-links ul li a:hover,
+body.light-mode .quick-links ul li a:hover {
+    color: var(--accent-light);
+}
+
+/* Cool Icons for Social Links and Quick Links */
+.social-links ul li a::before,
+.quick-links ul li a::before {
+    content: "→"; /* Arrow icon */
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.social-links ul li a:hover::before,
+.quick-links ul li a:hover::before {
+    opacity: 1; /* Show arrow on hover */
+}
+/* Icon Styling */
+.social-links ul li a i,
+.quick-links ul li a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 0.9rem; /* Icon size */
+    transition: transform 0.3s ease;
+}
+
+.social-links ul li a:hover i,
+.quick-links ul li a:hover i {
+    transform: scale(1.2); /* Icon grows on hover */
+}
+/* Icon Hover Effects */
+.social-links ul li a:hover i,
+.quick-links ul li a:hover i {
+    color: var(--accent-dark); /* Change icon color on hover */
+    transform: rotate(15deg) scale(1.2); /* Rotate and grow */
+}
+
+body.light-mode .social-links ul li a:hover i,
+body.light-mode .quick-links ul li a:hover i {
+    color: var(--accent-light);
+}
+
+/* Copyright Section */
+.copyright {
+    flex-basis: 100%;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: var(--gallery-item-bg-dark);
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.5s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.gallery-item.hidden {
+    display: none; /* Hide images initially */
+    opacity: 0; /* Fade out effect */
+}
+
+/* Load All Button */
+.load-all-btn {
+    background: var(--accent-dark);
+    border: none;
+    color: var(--background-dark);
+    padding: 12px 24px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.load-all-btn:hover {
+    background: #1C86EE; /* Slightly darker blue */
+    transform: scale(1.05);
+}
+
+.gallery-item {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+      }

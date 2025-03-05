@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span> <!-- This is the icon element -->
+    </button>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <h1 class="header-name">Raffsun.</h1>
+        </div>
+    </header>
+    
+
+    
+    <!-- Photography Section -->
+    <div class="section">
+        <h1>Photography</h1>
+        <div class="gallery" id="photography-gallery">
+            <!-- Initial Images -->
+            <img src="assets/pg/image01.jpg" alt="Photography 1" class="gallery-item photography" data-tags="nature, landscape" loading="lazy">
+            <img src="assets/pg/image02.jpg" alt="Photography 2" class="gallery-item photography" data-tags="city, architecture" loading="lazy">
+            <!-- Hidden Images -->
+    <img src="assets/pg/image03.jpg" alt="Photography 3" class="gallery-item photography hidden" data-tags="nature, sunset" loading="lazy">
+    <img src="assets/pg/image04.jpg" alt="Photography 4" class="gallery-item photography hidden" data-tags="city, night" loading="lazy">
+    <img src="assets/pg/image05.jpg" alt="Photography 5" class="gallery-item photography hidden" data-tags="mountain, sunrise" loading="lazy">
+    <img src="assets/pg/image06.jpg" alt="Photography 6" class="gallery-item photography hidden" data-tags="forest, wildlife" loading="lazy">
+    <img src="assets/pg/image07.jpg" alt="Photography 7" class="gallery-item photography hidden" data-tags="beach, ocean" loading="lazy">
+    <img src="assets/pg/image08.jpg" alt="Photography 8" class="gallery-item photography hidden" data-tags="desert, sand" loading="lazy">
+    <img src="assets/pg/image09.jpg" alt="Photography 9" class="gallery-item photography hidden" data-tags="river, waterfall" loading="lazy">
+    <img src="assets/pg/image10.jpg" alt="Photography 10" class="gallery-item photography hidden" data-tags="snow, winter" loading="lazy">
+    <img src="assets/pg/image11.jpg" alt="Photography 11" class="gallery-item photography hidden" data-tags="cityscape, lights" loading="lazy">
+    <img src="assets/pg/image12.jpg" alt="Photography 12" class="gallery-item photography hidden" data-tags="autumn, leaves" loading="lazy">
+    <img src="assets/pg/image13.jpg" alt="Photography 13" class="gallery-item photography hidden" data-tags="flowers, spring" loading="lazy">
+    <img src="assets/pg/image14.jpg" alt="Photography 14" class="gallery-item photography hidden" data-tags="hills, valley" loading="lazy">
+    <img src="assets/pg/image15.jpg" alt="Photography 15" class="gallery-item photography hidden" data-tags="sky, clouds" loading="lazy">
+    <img src="assets/pg/image16.jpg" alt="Photography 16" class="gallery-item photography hidden" data-tags="lake, reflection" loading="lazy">
+    <img src="assets/pg/image17.jpg" alt="Photography 17" class="gallery-item photography hidden" data-tags="storm, lightning" loading="lazy">
+    <img src="assets/pg/image18.jpg" alt="Photography 18" class="gallery-item photography hidden" data-tags="birds, nature" loading="lazy">
+    <img src="assets/pg/image19.jpg" alt="Photography 19" class="gallery-item photography hidden" data-tags="fog, mystery" loading="lazy">
+    <img src="assets/pg/image20.jpg" alt="Photography 20" class="gallery-item photography hidden" data-tags="village, countryside" loading="lazy">
+    <img src="assets/pg/image21.jpg" alt="Photography 21" class="gallery-item photography hidden" data-tags="bridge, river" loading="lazy">
+    <img src="assets/pg/image22.jpg" alt="Photography 22" class="gallery-item photography hidden" data-tags="night sky, stars" loading="lazy">
+    <img src="assets/pg/image23.jpg" alt="Photography 23" class="gallery-item photography hidden" data-tags="rain, reflections" loading="lazy">
+    <img src="assets/pg/image24.jpg" alt="Photography 24" class="gallery-item photography hidden" data-tags="cave, underground" loading="lazy">
+    <img src="assets/pg/image25.jpg" alt="Photography 25" class="gallery-item photography hidden" data-tags="wild animals, safari" loading="lazy">
+    <img src="assets/pg/image26.jpg" alt="Photography 26" class="gallery-item photography hidden" data-tags="cloudy, overcast" loading="lazy">
+    <img src="assets/pg/image27.jpg" alt="Photography 27" class="gallery-item photography hidden" data-tags="island, paradise" loading="lazy">
+    <img src="assets/pg/image28.jpg" alt="Photography 28" class="gallery-item photography hidden" data-tags="harbor, ships" loading="lazy">
+    <img src="assets/pg/image29.jpg" alt="Photography 29" class="gallery-item photography hidden" data-tags="water droplets, macro" loading="lazy">
+    <img src="assets/pg/image30.jpg" alt="Photography 30" class="gallery-item photography hidden" data-tags="sunset, golden hour" loading="lazy">
+    <img src="assets/pg/image31.jpg" alt="Photography 31" class="gallery-item photography hidden" data-tags="volcano, eruption" loading="lazy">
+    <img src="assets/pg/image32.jpg" alt="Photography 32" class="gallery-item photography hidden" data-tags="hot air balloons, sky" loading="lazy">
+    <img src="assets/pg/image33.jpg" alt="Photography 33" class="gallery-item photography hidden" data-tags="aurora, northern lights" loading="lazy">
+    <img src="assets/pg/image34.jpg" alt="Photography 34" class="gallery-item photography hidden" data-tags="city skyline, sunrise" loading="lazy">
+    <img src="assets/pg/image35.jpg" alt="Photography 35" class="gallery-item photography hidden" data-tags="train tracks, travel" loading="lazy">
+    <img src="assets/pg/image36.jpg" alt="Photography 36" class="gallery-item photography hidden" data-tags="temple, ancient ruins" loading="lazy">
+    <img src="assets/pg/image37.jpg" alt="Photography 37" class="gallery-item photography hidden" data-tags="road trip, open road" loading="lazy">
+    <img src="assets/pg/image38.jpg" alt="Photography 38" class="gallery-item photography hidden" data-tags="cliffs, ocean waves" loading="lazy">
+    <img src="assets/pg/image39.jpg" alt="Photography 39" class="gallery-item photography hidden" data-tags="lighthouse, coast" loading="lazy">
+            </div>
+      <button class="load-all-btn" id="load-all-btn" onclick="toggleAllPhotos()">Load All</button>
+        </div>  
+
+    <!-- Designs Section -->
+    <div class="section">
+        <h1>Designs</h1>
+        <!-- Search Bar -->
+        <input type="text" id="search-bar" placeholder="Search designs..." oninput="searchImages()">
+
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterImages('all')" aria-label="Show all designs">All</button>
+            <button class="filter-btn" onclick="filterImages('posters')" aria-label="Filter posters">Posters</button>
+            <button class="filter-btn" onclick="filterImages('graphics')" aria-label="Filter graphics">Graphics</button>
+            <button class="filter-btn" onclick="filterImages('generates')" aria-label="Filter generates">Generates</button>
+            <button class="filter-btn" onclick="filterImages('quotes')" aria-label="Filter quotes">Quotes</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery" id="designs-gallery">
+            <!-- Quotes -->
+            <img src="assets/q1.png" alt="Quote 1" class="gallery-item quotes" data-tags="quote, design, art" loading="lazy">
+            <img src="assets/q2.png" alt="Quote 2" class="gallery-item quotes" data-tags="quote, design, art" loading="lazy">
+            <!-- Generates -->
+            <img src="assets/g1.jpg" alt="Generate 1" class="gallery-item generates" data-tags="generate, design, art" loading="lazy">
+            <img src="assets/g2.jpg" alt="Generate 2" class="gallery-item generates" data-tags="generate, design, art" loading="lazy">
+            <!-- Posters -->
+            <img src="assets/p1.png" alt="Poster 1" class="gallery-item posters" data-tags="poster, design, art" loading="lazy">
+            <img src="assets/p2.png" alt="Poster 2" class="gallery-item posters" data-tags="poster, design, art" loading="lazy">
+
+            <!-- Graphics -->
+            <img src="assets/gr1.png" alt="Graphic 1" class="gallery-item graphics" data-tags="graphic, design, art" loading="lazy">
+            <img src="assets/gr2.png" alt="Graphic 2" class="gallery-item graphics" data-tags="graphic, design, art" loading="lazy">
+
+
+
+
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()" tabindex="0" aria-label="Close lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="caption" id="lightbox-caption"></div>
+        <div class="prev" onclick="changeImage(-1)" tabindex="0" aria-label="Previous image">&#10094;</div>
+        <div class="next" onclick="changeImage(1)" tabindex="0" aria-label="Next image">&#10095;</div>
+        <a id="download-btn" download>
+            <button>Download</button>
+        </a>
+
+    </div>
+
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">Loading...</div>
+    
+    
+    <!-- Footer Section -->
+    <!-- Add this before the footer -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M0,50 C150,150 350,0 500,50 L500,150 L0,150 Z" style="stroke: none; fill: var(--section-bg-dark);"></path>
+        </svg>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <h3>Follow Me</h3>
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/raffsun794" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://telegram.org/raffsun" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/me.raffsun" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="http://raffsun7.github.io/home">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#photography">
+                            <i class="fas fa-camera"></i> Photography
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#designs">
+                            <i class="fas fa-palette"></i> Designs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://raffsun7.github.io/social">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Copyright Notice -->
+            <div class="copyright">
+                <p>© 2025 Raffsun Zany. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html> 
